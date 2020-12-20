@@ -8,7 +8,7 @@
 
 #include "StringsAndArrays_Problem2.hpp"
 
-#include <map>
+ /* Include any other headers you may wish to use */
 
 bool check_permutation( const std::string& str1, const std::string& str2 ) {
 
