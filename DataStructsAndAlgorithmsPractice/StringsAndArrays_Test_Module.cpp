@@ -33,7 +33,7 @@ BOOST_AUTO_TEST_CASE( strings_and_arrays_test_1 ) {
 	test_str.push_back( 'a' );
 	BOOST_TEST( !is_unique( test_str ) );
 
-	/* empty string */
+	/* empty string should be unique */
 	BOOST_TEST( is_unique( "" ) );
 
 	/* even-numbered size, non-unique */
@@ -65,9 +65,21 @@ BOOST_AUTO_TEST_CASE( strings_and_arrays_test_2 ) {
 	BOOST_TEST( !check_permutation( "abc", "" ) );
 
 	/* empty string is permutation of empty string */
-	BOOST_TEST( !check_permutation( "", "" ) );
+	BOOST_TEST( check_permutation( "", "" ) );
 
 	BOOST_TEST( check_permutation( "abc", "cba" ) );
+
+	BOOST_TEST( !check_permutation( "abc", "abc " ) );
+
+	BOOST_TEST( check_permutation( " abc", "abc " ) );
+
+	BOOST_TEST( !check_permutation( "abc", " abc " ) );
+
+	BOOST_TEST( !check_permutation( "abc", "                 abc" ) );
+
+	BOOST_TEST( check_permutation( "abc       ", "       abc" ) );
+
+	BOOST_TEST( !check_permutation( "aabc", "abc" ) );
 
 	BOOST_TEST( !check_permutation( "abc", "cbad" ) );
 
@@ -75,17 +87,21 @@ BOOST_AUTO_TEST_CASE( strings_and_arrays_test_2 ) {
 
 	BOOST_TEST( check_permutation( "taco cat", "tac ocat" ) );
 
+	BOOST_TEST( check_permutation( "bumbus cat", "bum catbus" ) );
+
 	BOOST_TEST( check_permutation( "school master", "the classroom" ) );
 
 	BOOST_TEST( check_permutation( "a gentleman", "elegant man" ) );
 
-	BOOST_TEST( check_permutation( "Dormitory", "Dirty room" ) );
+	BOOST_TEST( !check_permutation( "Dormitory ", "Dirty Room" ) );
 
 	BOOST_TEST( !check_permutation( "Listen", "Silent" ) );
 
 	BOOST_TEST( check_permutation( "The eyes", "They see" ) );
 
 	BOOST_TEST( !check_permutation( "Conversation", "Voices rant on" ) );
+
+	
 }
 #endif // __PROBLEM_2__
 
