@@ -3,7 +3,7 @@
  *  @date		2020-12-19
  *	@author		Teran Bukenberger
  *
- *  @brief		Write a method to replace all spaces in a string with '%20'. You may assum that
+ *  @brief		Write a method to replace all spaces in a string with '%20'. You may assume that
  *				that the string has sufficient space at the end to hold additional characters,
  *				and that you are given the 'true' length of the string.
  * 
@@ -24,7 +24,7 @@ using namespace std;
 	Function Name:	URLify
 	Purpose:		Replaces all spaces in a string with '%20'
 	Accepts:		const string&
-	Returns:		string
+	Returns:		const string&
 
 	Time complexity:	O(...)
 	Space complexity:	O(...)
