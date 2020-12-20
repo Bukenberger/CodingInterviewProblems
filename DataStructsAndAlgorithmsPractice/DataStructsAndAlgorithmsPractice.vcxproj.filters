@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\StringsAndArrays">
+      <UniqueIdentifier>{7a3359da-e74c-4069-adc4-62fb57275b4e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StringsAndArrays_Test_Module.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BoostTestCaseMacros.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProblemSets.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StringsAndArrays_Problem1.hpp">
+      <Filter>Header Files\StringsAndArrays</Filter>
+    </ClInclude>
+    <ClInclude Include="StringsAndArrays_Problem2.hpp">
+      <Filter>Header Files\StringsAndArrays</Filter>
+    </ClInclude>
+    <ClInclude Include="StringsAndArrays_Problem3.hpp">
+      <Filter>Header Files\StringsAndArrays</Filter>
+    </ClInclude>
+    <ClInclude Include="StringsAndArrays_Problem4.hpp">
+      <Filter>Header Files\StringsAndArrays</Filter>
+    </ClInclude>
+    <ClInclude Include="StringsAndArrays_Problem5.hpp">
+      <Filter>Header Files\StringsAndArrays</Filter>
+    </ClInclude>
+    <ClInclude Include="StringsAndArrays_Problem6.hpp">
+      <Filter>Header Files\StringsAndArrays</Filter>
+    </ClInclude>
+    <ClInclude Include="StringsAndArrays_Problem7.hpp">
+      <Filter>Header Files\StringsAndArrays</Filter>
+    </ClInclude>
+    <ClInclude Include="StringsAndArrays_Problem8.hpp">
+      <Filter>Header Files\StringsAndArrays</Filter>
+    </ClInclude>
+    <ClInclude Include="StringsAndArrays_Problem9.hpp">
+      <Filter>Header Files\StringsAndArrays</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
