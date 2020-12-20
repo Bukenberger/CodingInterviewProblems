@@ -140,6 +140,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="StringsAndArrays_Problem1.cpp" />
+    <ClCompile Include="StringsAndArrays_Problem2.cpp" />
+    <ClCompile Include="StringsAndArrays_Problem3.cpp" />
+    <ClCompile Include="StringsAndArrays_Problem4.cpp" />
+    <ClCompile Include="StringsAndArrays_Problem5.cpp" />
+    <ClCompile Include="StringsAndArrays_Problem6.cpp" />
+    <ClCompile Include="StringsAndArrays_Problem7.cpp" />
+    <ClCompile Include="StringsAndArrays_Problem8.cpp" />
+    <ClCompile Include="StringsAndArrays_Problem9.cpp" />
     <ClCompile Include="StringsAndArrays_Test_Module.cpp" />
   </ItemGroup>
   <ItemGroup>

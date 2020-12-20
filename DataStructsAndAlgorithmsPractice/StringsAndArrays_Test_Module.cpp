@@ -10,6 +10,8 @@
 #include "BoostTestCaseMacros.hpp"	// Switch tests cases on/off
 
 #include <boost/test/unit_test.hpp>	// Differs from "boost/test/included/unit_test.hpp" which is used in main.cpp
+#include <string>
+using namespace std;
 
 // All test cases for Strings and Arrays
 #ifdef __STRINGS_AND_ARRAYS_SWITCH__
