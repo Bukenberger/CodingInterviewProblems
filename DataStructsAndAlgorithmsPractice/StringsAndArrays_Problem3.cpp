@@ -17,7 +17,7 @@
 
  /* Include any other headers you may wish to use */
 
-const std::string& URLify( const std::string& str ) {
+std::string URLify( const std::string& str ) {
 
 	// TODO...
 
