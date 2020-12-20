@@ -102,10 +102,8 @@ BOOST_AUTO_TEST_CASE( strings_and_arrays_test_2 ) {
 	BOOST_TEST( check_permutation( "The eyes", "They see" ) );
 
 	BOOST_TEST( !check_permutation( "Conversation", "Voices rant on" ) );
-
-	
 }
-#endif // __PROBLEM_2__
+#endif // __STRINGS_AND_ARRAYS_PROBLEM_2__
 
 #ifdef __STRINGS_AND_ARRAYS_PROBLEM_3__
 BOOST_AUTO_TEST_CASE( strings_and_arrays_test_3 ) {
