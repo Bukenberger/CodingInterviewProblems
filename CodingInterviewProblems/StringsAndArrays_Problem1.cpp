@@ -18,27 +18,9 @@
 /* Algorithm solution using an additional data structure */
 #ifndef __EXTRA__
 bool is_unique( const std::string& str ) {
-	// An empty string can be considered unique
-	if (str.empty())
-		return true;
 
-	// Exceeds number characters in the ASCII table, therefore 
-	// the string is not a duplicate
-	if (str.size() > 128)
-		return false;
+	// TODO...
 
-	// Holds boolean values for 128 ASCII character map
-	bool char_set[128] = { false }; // All 128 values initialized to false
-
-	for (std::string::const_iterator it = str.begin(); it != str.end(); ++it) {
-		// Integer holding the current character's ASCII code
-		int val = *it;
-		// Check ASCII code against the character map
-		if (char_set[val])	// If true, this value already exists in the map 
-			return false;
-		// Mark this ASCII character as found
-		char_set[val] = true;
-	}
 	return true;
 }
 
@@ -47,23 +29,8 @@ bool is_unique( const std::string& str ) {
 /* Algorithm solution without using an additional data structure */
 #ifdef __EXTRA__
 bool is_unique( const std::string& str ) {
-	// An empty string can be considered unique
-	if (str.empty())
-		return true;
-
-	// Exceeds number characters in the ASCII table, therefore 
-	// the string is not a duplicate
-	if (str.size() > 128)
-		return false;
-
-	// Outer loop iterates through each character once
-	for (std::string::const_iterator it_i = str.begin(); it_i != str.end(); ++it_i) {
-		// Inner loop starts at it_i + 1 and compares the remaining values
-		for (std::string::const_iterator it_j = it_i + 1; it_j != str.end(); ++it_j) {
-			if (*it_i == *it_j)
-				return false;
-		}
-	}
+	
+	// TODO...
 
 	return true;
 }
