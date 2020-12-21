@@ -3,7 +3,7 @@
  *  @date		2020-12-19
  *	@author		Teran Bukenberger
  *
- *  @brief		Utility functions which can be used in some problems
+ *  @brief		Utility functions which are used in test cases and some problems
  */
 
 #ifndef __UTILITIES_HPP__
@@ -29,6 +29,12 @@ inline bool is_sub_string( const std::string& str1, const std::string& str2 ) {
 	Returns:		bool
 */
 inline bool check_matrices( std::vector<std::vector<int>>& mat1, std::vector<std::vector<int>>& mat2 ) {
+	if (mat1.size() != mat2.size())
+		return false;
+
+	if (mat1[0].size() != mat2[0].size())
+		return false;
+
 	for (int row = 0; row < mat1.size(); ++row)
 		for (int col = 0; col < mat1.size(); ++col)
 			if (mat1[row][col] != mat2[row][col])

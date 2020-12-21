@@ -9,15 +9,16 @@
 #ifndef __STRINGS_AND_ARRAYS_PROBLEM_8_HPP__
 #define __STRINGS_AND_ARRAYS_PROBLEM_8_HPP__
 
- /* Include any headers you wish to use */
+#include <vector>
+using Matrix = std::vector<std::vector<int>>;
 
 /*
 	Function Name:	zero_matrix
 	Purpose:		If an element in a matrix is 0, all values in its row 
 					and column are all set to 0
-	Accepts:		int** (int[][])
-	Returns:		int** (int[][])
+	Accepts:		vector<vector<int>>
+	Returns:		vector<vector<int>>
 */
-int** zero_matrix( int** mat );
+Matrix& zero_matrix( Matrix mat );
 
 #endif // !__STRINGS_AND_ARRAYS_PROBLEM_8_HPP__
