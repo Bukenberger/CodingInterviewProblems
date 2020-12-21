@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DataStructsAndAlgorithmsPractice", "DataStructsAndAlgorithmsPractice\DataStructsAndAlgorithmsPractice.vcxproj", "{9A4542FF-6453-48F5-8605-6C81A02DC272}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CodingInterviewProblems", "CodingInterviewProblems\CodingInterviewProblems.vcxproj", "{9A4542FF-6453-48F5-8605-6C81A02DC272}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

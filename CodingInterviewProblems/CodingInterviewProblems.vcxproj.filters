@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="StringsAndArrays_Problem1.cpp">
+      <Filter>Source Files\StringsAndArrays</Filter>
+    </ClCompile>
+    <ClCompile Include="StringsAndArrays_Problem2.cpp">
+      <Filter>Source Files\StringsAndArrays</Filter>
+    </ClCompile>
+    <ClCompile Include="StringsAndArrays_Problem3.cpp">
+      <Filter>Source Files\StringsAndArrays</Filter>
+    </ClCompile>
+    <ClCompile Include="StringsAndArrays_Problem4.cpp">
+      <Filter>Source Files\StringsAndArrays</Filter>
+    </ClCompile>
+    <ClCompile Include="StringsAndArrays_Problem5.cpp">
+      <Filter>Source Files\StringsAndArrays</Filter>
+    </ClCompile>
+    <ClCompile Include="StringsAndArrays_Problem6.cpp">
+      <Filter>Source Files\StringsAndArrays</Filter>
+    </ClCompile>
+    <ClCompile Include="StringsAndArrays_Problem7.cpp">
+      <Filter>Source Files\StringsAndArrays</Filter>
+    </ClCompile>
+    <ClCompile Include="StringsAndArrays_Problem8.cpp">
+      <Filter>Source Files\StringsAndArrays</Filter>
+    </ClCompile>
+    <ClCompile Include="StringsAndArrays_Problem9.cpp">
+      <Filter>Source Files\StringsAndArrays</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StringsAndArrays_Test_Module.cpp">
+      <Filter>Source Files\Test Modules</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="StringsAndArrays_Problem1.hpp">
+      <Filter>Header Files\StringsAndArrays</Filter>
+    </ClInclude>
+    <ClInclude Include="StringsAndArrays_Problem2.hpp">
+      <Filter>Header Files\StringsAndArrays</Filter>
+    </ClInclude>
+    <ClInclude Include="StringsAndArrays_Problem3.hpp">
+      <Filter>Header Files\StringsAndArrays</Filter>
+    </ClInclude>
+    <ClInclude Include="StringsAndArrays_Problem4.hpp">
+      <Filter>Header Files\StringsAndArrays</Filter>
+    </ClInclude>
+    <ClInclude Include="StringsAndArrays_Problem5.hpp">
+      <Filter>Header Files\StringsAndArrays</Filter>
+    </ClInclude>
+    <ClInclude Include="StringsAndArrays_Problem6.hpp">
+      <Filter>Header Files\StringsAndArrays</Filter>
+    </ClInclude>
+    <ClInclude Include="StringsAndArrays_Problem7.hpp">
+      <Filter>Header Files\StringsAndArrays</Filter>
+    </ClInclude>
+    <ClInclude Include="StringsAndArrays_Problem8.hpp">
+      <Filter>Header Files\StringsAndArrays</Filter>
+    </ClInclude>
+    <ClInclude Include="StringsAndArrays_Problem9.hpp">
+      <Filter>Header Files\StringsAndArrays</Filter>
+    </ClInclude>
+    <ClInclude Include="BoostTestCaseMacros.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProblemSets.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{836eef8e-b2de-4cd8-a4ed-8e317c0877a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\StringsAndArrays">
+      <UniqueIdentifier>{b11876e0-f91d-40df-8931-c36349e54a37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{a208f55c-f44c-4765-b5f2-b3ad33a4bdd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\StringsAndArrays">
+      <UniqueIdentifier>{01702f4b-966c-4fd9-a561-b444768e5ed3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Test Modules">
+      <UniqueIdentifier>{4b6dd49c-0ab8-450a-91d5-e172f7d8a2bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{4210d4db-66ef-496f-8105-59754065839d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

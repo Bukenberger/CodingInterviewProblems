@@ -22,20 +22,7 @@
 
 bool palindrome_permutation( const std::string& str ) {
 
-	std::map<char, int> occurrences;
-	for (std::string::const_iterator it = str.begin(); it != str.end(); ++it) {
-		if (*it != ' ')
-			occurrences[tolower(*it)]++;
-	}
-
-	bool foundOdd = false;
-	for (auto k : occurrences) {
-		if (k.second % 2 != 0) {
-			if (foundOdd)
-				return false;
-			foundOdd = true;
-		}
-	}
+	// TODO...
 
 	return true;
 }

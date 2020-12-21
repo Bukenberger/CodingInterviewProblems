@@ -22,8 +22,9 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{9a4542ff-6453-48f5-8605-6c81a02dc272}</ProjectGuid>
-    <RootNamespace>DataStructsAndAlgorithmsPractice</RootNamespace>
+    <RootNamespace>CodingInterviewProblems</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>CodingInterviewProblems</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
