@@ -18,6 +18,6 @@
 	Accepts:		const string&
 	Returns:		const string&
 */
-const std::string& string_compression( const std::string& str );
+std::string string_compression( const std::string& str );
 
 #endif // !__STRINGS_AND_ARRAYS_PROBLEM_6_HPP__

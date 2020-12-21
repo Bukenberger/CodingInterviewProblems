@@ -17,6 +17,6 @@
 	Accepts:		const string&
 	Returns:		const string&
 */
-const std::string& URLify( const std::string& str );
+std::string URLify( const std::string& str, const int& len );
 
 #endif // !__STRINGS_AND_ARRAYS_PROBLEM_3_HPP__

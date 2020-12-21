@@ -10,8 +10,7 @@
 #define __STRINGS_AND_ARRAYS_PROBLEM_9_HPP__
 
 #include <string>
-
-#include "Utilities.hpp"	// Contains the is_sub_string() function
+#include "Utilities.hpp"
 
 /*
 	Function Name:	string_rotation

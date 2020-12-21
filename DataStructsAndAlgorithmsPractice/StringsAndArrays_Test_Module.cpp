@@ -7,9 +7,12 @@
  */
 
 #include "ProblemSets.hpp"			// Contains all of the includes for each problem set
-#include "BoostTestCaseMacros.hpp"	// Switch tests cases on/off
+#include "Utilities.hpp"
 
 #include <boost/test/unit_test.hpp>	// Differs from "boost/test/included/unit_test.hpp" which is used in main.cpp
+#include <boost/test/output_test_stream.hpp>
+using boost::test_tools::output_test_stream;
+
 #include <string>
 using namespace std;
 
@@ -107,31 +110,186 @@ BOOST_AUTO_TEST_CASE( strings_and_arrays_test_2 ) {
 
 #ifdef __STRINGS_AND_ARRAYS_PROBLEM_3__
 BOOST_AUTO_TEST_CASE( strings_and_arrays_test_3 ) {
+	/* empty string */
+	BOOST_TEST( URLify( "", 0 ) == "" );
 
+	BOOST_TEST( URLify( "         ", 3 ) == "%20%20%20" );
+
+	/* short string */
+	BOOST_TEST( URLify( "p q  ", 3 ) == "p%20q" );
+
+	/* no spaces between characters or words, proper length */
+	BOOST_TEST( URLify( "pq   ", 2 ) != "pq%20" );
+
+	/* average length words, one space between */
+	BOOST_TEST( URLify( "Hello, World!  ", 13 ) == "Hello,%20World!" );
+
+	/* more than 2 words */
+	BOOST_TEST( URLify( "Mr John Smith    ", 13 ) == "Mr%20John%20Smith" );
+
+	/* many spaces and characters */
+	BOOST_TEST( URLify( 
+		"a b c d e f g h i j k l m n o p q r s t u v w x y z                                                  ", 51 ) 
+		== "a%20b%20c%20d%20e%20f%20g%20h%20i%20j%20k%20l%20m%20n%20o%20p%20q%20r%20s%20t%20u%20v%20w%20x%20y%20z" );
 }
 #endif // __STRINGS_AND_ARRAYS_PROBLEM_3__
 
 #ifdef __STRINGS_AND_ARRAYS_PROBLEM_4__
 BOOST_AUTO_TEST_CASE( strings_and_arrays_test_4 ) {
+	/* empty string */
+	BOOST_TEST( palindrome_permutation( "" ) );
+
+	/* one-character string */
+	BOOST_TEST( palindrome_permutation( "a" ) );
+
+	/* palindrome with space */
+	BOOST_TEST( palindrome_permutation( "taco cat" ) );
+
+	/* palindrome with space and upper-case */
+	BOOST_TEST( palindrome_permutation( "Taco cat" ) );
+
+	/* every other character is upper-case */
+	BOOST_TEST( palindrome_permutation( "tAcO cAt" ) );
+
+	/* test words with one number */
+	BOOST_TEST( palindrome_permutation( "test1test" ) );
+
+	/* test only odd number of digits */
+	BOOST_TEST( palindrome_permutation( "121" ) );
+
+	/* test only even number of digits */
+	BOOST_TEST( palindrome_permutation( "1221" ) );
+
+	BOOST_TEST( palindrome_permutation( "aba" ) );
+
+	BOOST_TEST( palindrome_permutation( "abba" ) );
 
 }
 #endif // __STRINGS_AND_ARRAYS_PROBLEM_4__
 
 #ifdef __STRINGS_AND_ARRAYS_PROBLEM_5__
 BOOST_AUTO_TEST_CASE( strings_and_arrays_test_5 ) {
+	/* empty string */
+	BOOST_TEST( one_away( "", "" ) );
 
+	/* 2 edits away */
+	BOOST_TEST( !one_away( "", "ab" ) );
+
+	BOOST_TEST( one_away( "ab", "abc" ) );
+
+	BOOST_TEST( !one_away( "ab", "abcd" ) );
+
+	BOOST_TEST( one_away( "abc", "abd" ) );
+
+	BOOST_TEST( one_away( "12", "123" ) );
+
+	BOOST_TEST( one_away( "adc", "abc" ) );
+
+	BOOST_TEST( one_away( "abc", "abc" ) );
+
+	BOOST_TEST( one_away( "", " " ) );
+
+	BOOST_TEST( one_away( "  ", " " ) );
+
+	BOOST_TEST( one_away( "12345", "12346" ) );
+
+	BOOST_TEST( !one_away( "abcdefghijklmnopqrstuvwxyz", "abcdefghijk1mn0pqrstuvwxyz" ) );
+
+	BOOST_TEST( !one_away( "abcdefghijklmnopqrstuvwxyz", "abcdefghijk1mnopqrs7uvwxyz" ) );
+
+	BOOST_TEST( one_away( "abcdefghijklmnopqrstuvwxyz", "abcdefghijklmnopqrstuvwxyz " ) );
 }
 #endif // __STRINGS_AND_ARRAYS_PROBLEM_5__
 
 #ifdef __STRINGS_AND_ARRAYS_PROBLEM_6__
 BOOST_AUTO_TEST_CASE( strings_and_arrays_test_6 ) {
+	BOOST_TEST( string_compression( "aabcccccaaa" ) == "a2b1c5a3" );
 
+	BOOST_TEST( string_compression( "" ) == "" );
+
+	BOOST_TEST( string_compression( "aaAAbc" ) == "aaAAbc" );
+
+	BOOST_TEST( string_compression( "a" ) == "a" );
+
+	BOOST_TEST( string_compression( "abcdefghijklmnopqrstuvwxyz" ) == "abcdefghijklmnopqrstuvwxyz" );
+
+	BOOST_TEST( 
+		string_compression( "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" ) 
+		== "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" 
+	);
+
+	BOOST_TEST( string_compression( "BBa" ) == "BBa" );
+
+	BOOST_TEST( string_compression( "abbaaaabb" ) == "a1b2a4b2" );
+
+	BOOST_TEST( string_compression( "test" ) == "test" );
+
+	BOOST_TEST( string_compression( "TEST" ) == "TEST" );
+
+	BOOST_TEST( string_compression( "tEsT" ) == "tEsT" );
 }
 #endif // __STRINGS_AND_ARRAYS_PROBLEM_6__
 
 #ifdef __STRINGS_AND_ARRAYS_PROBLEM_7__
+
 BOOST_AUTO_TEST_CASE( strings_and_arrays_test_7 ) {
 
+	Matrix emptyMat;
+	BOOST_CHECK_THROW( rotate_matrix( emptyMat ), invalid_argument );
+
+	Matrix mat1x1;
+	Matrix resultMat1x1;
+	generate_linear_matrices( mat1x1, resultMat1x1, 1 );
+	BOOST_TEST( check_matrices( rotate_matrix( mat1x1 ), resultMat1x1 ) );
+
+	Matrix mat2x2;
+	Matrix resultMat2x2;
+	generate_linear_matrices( mat2x2, resultMat2x2, 2 );
+	BOOST_TEST( check_matrices( rotate_matrix( mat2x2 ), resultMat2x2 ) );
+
+	Matrix mat4x4 = {
+		{ 1, 2, 3, 4 },
+		{ 2, 3, 2, 3 },
+		{ 3, 2, 3, 2 },
+		{ 4, 3, 2, 1 }
+	};
+
+	Matrix resultMat1 = {
+		{ 4, 3, 2, 1 },
+		{ 3, 2, 3, 2 },
+		{ 2, 3, 2, 3 },
+		{ 1, 2, 3, 4 }
+	};
+
+	BOOST_TEST( check_matrices( rotate_matrix( mat4x4 ), resultMat1 ) );
+
+	Matrix identityMat = {
+		{ 1, 0, 0, 0, 0 },
+		{ 0, 1, 0, 0, 0 },
+		{ 0, 0, 1, 0, 0 },
+		{ 0, 0, 0, 1, 0 },
+		{ 0, 0, 0, 0, 1 },
+	};
+
+	Matrix resultMat2 = {
+		{ 0, 0, 0, 0, 1 },
+		{ 0, 0, 0, 1, 0 },
+		{ 0, 0, 1, 0, 0 },
+		{ 0, 1, 0, 0, 0 },
+		{ 1, 0, 0, 0, 0 },
+	};
+
+	BOOST_TEST( check_matrices( rotate_matrix( identityMat ), resultMat2 ) );
+
+	Matrix mat100x100;
+	Matrix resultMat100x100;
+	generate_linear_matrices( mat100x100, resultMat100x100, 100 );
+	BOOST_TEST( check_matrices( rotate_matrix( mat100x100 ), resultMat100x100 ) );
+
+	Matrix mat1000x1000;
+	Matrix resultMat1000x1000;
+	generate_linear_matrices( mat1000x1000, resultMat1000x1000, 1000 );
+	BOOST_TEST( check_matrices( rotate_matrix( mat1000x1000 ), resultMat1000x1000 ) );
 }
 #endif // __STRINGS_AND_ARRAYS_PROBLEM_7__
 

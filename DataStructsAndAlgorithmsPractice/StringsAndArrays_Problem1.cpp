@@ -56,7 +56,7 @@ bool is_unique( const std::string& str ) {
 	if (str.size() > 128)
 		return false;
 
-	// Outer loop iterates through each character ones
+	// Outer loop iterates through each character once
 	for (std::string::const_iterator it_i = str.begin(); it_i != str.end(); ++it_i) {
 		// Inner loop starts at it_i + 1 and compares the remaining values
 		for (std::string::const_iterator it_j = it_i + 1; it_j != str.end(); ++it_j) {

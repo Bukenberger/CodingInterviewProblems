@@ -8,6 +8,8 @@
  *				by 90 degrees.
  *
  *				Extra: Can you do this in place?
+ * 
+ *				NOTE: Matrix = vector<vector<int>>
  */
 
 #include "StringsAndArrays_Problem7.hpp"
@@ -19,8 +21,8 @@
 
  /* Algorithm solution which does not rotate the matrix in place */
 #ifndef __EXTRA__
-int** rotate_matrix( int** mat ) {
-	// NOTE: A pointer to a pointer (int**) is the same as a 2-D array (int[][])
+Matrix& rotate_matrix( Matrix& mat ) {
+
 	// TODO...
 
 	return mat;
@@ -29,8 +31,8 @@ int** rotate_matrix( int** mat ) {
 
 /* Algorithm solution which rotates the matrix in place */
 #ifdef __EXTRA__
-int** rotate_matrix( int** mat ) {
-	// NOTE: A pointer to a pointer (int**) is the same as a 2-D array (int[][])
+Matrix& rotate_matrix( Matrix& mat ) {
+
 	// TODO...
 
 	return mat;

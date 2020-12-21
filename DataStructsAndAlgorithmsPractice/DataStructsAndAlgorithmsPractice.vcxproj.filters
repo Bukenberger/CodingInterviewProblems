@@ -19,12 +19,12 @@
     <Filter Include="Source Files\StringsAndArrays">
       <UniqueIdentifier>{610cbe46-f39f-4eb9-965c-36bab9d3f27e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Test Modules">
+      <UniqueIdentifier>{6e858e86-fc63-4f15-9dea-7eda08aeb85a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="StringsAndArrays_Test_Module.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="StringsAndArrays_Problem1.cpp">
@@ -53,6 +53,9 @@
     </ClCompile>
     <ClCompile Include="StringsAndArrays_Problem9.cpp">
       <Filter>Source Files\StringsAndArrays</Filter>
+    </ClCompile>
+    <ClCompile Include="StringsAndArrays_Test_Module.cpp">
+      <Filter>Source Files\Test Modules</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

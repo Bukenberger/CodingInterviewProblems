@@ -9,12 +9,16 @@
 #ifndef __STRINGS_AND_ARRAYS_PROBLEM_7_HPP__
 #define __STRINGS_AND_ARRAYS_PROBLEM_7_HPP__
 
+#include <vector>
+using Matrix = std::vector<std::vector<int>>;
+
 /*
 	Function Name:	rotate_matrix
 	Purpose:		Rotates an NxN matrix representing pixels in an image by 90 degrees
-	Accepts:		const int** (const int[][])
-	Returns:		const int** (const int[][])
+	Accepts:		vector<vector<int>>
+	Returns:		vector<vector<int>>
 */
-int** rotate_matrix( int** mat );
+Matrix& rotate_matrix( Matrix& mat );
+
 
 #endif // !__STRINGS_AND_ARRAYS_PROBLEM_7_HPP__

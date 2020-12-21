@@ -16,10 +16,35 @@
 #include "StringsAndArrays_Problem3.hpp"
 
  /* Include any other headers you may wish to use */
+#include <stdexcept>	// invalid_argument exception
 
-const std::string& URLify( const std::string& str ) {
+std::string URLify( const std::string& str, const int& len ) {
+	// no spaces to replace
+	if (str.empty())
+		return "";
 
-	// TODO...
+	// string with spaces to replace
+	std::string newStr = str;
 
-	return str;
+	// size of the entire string, 0-indexed
+	int index = str.size() - 1;
+	// Start from the end of the 'real length' check for spaces
+	// while moving to the start
+	for (int i = len - 1; i >=0; --i) {
+		// if we're at a space, replace the current index with '%20' and move the
+		// index 3 elements to the left
+		if (newStr[i] == ' ') {
+			newStr[index] = '0';
+			newStr[index - 1] = '2';
+			newStr[index - 2] = '%';
+			index -= 3;
+		}
+		else {
+			// no space found, check next
+			newStr[index] = newStr[i];
+			--index;
+		}
+	}
+
+	return newStr;
 }

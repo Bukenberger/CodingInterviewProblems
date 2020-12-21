@@ -15,9 +15,9 @@
 
  /* Include any other headers you may wish to use */
 
-const std::string& string_compression( const std::string& str ) {
+std::string string_compression( const std::string& str ) {
 
 	// TODO...
 
-	return str;
+	return "";
 }
